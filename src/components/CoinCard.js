@@ -81,7 +81,7 @@ const {
     percentChangeMinus
 } = styles;
 
-const CoinCard = ({ symbol, coin_name, price_usd, percent_change_24h, percent_change_7d }) => {
+const CoinCard = ({ symbol, coin_name, price_usd, price_thb, percent_change_24h, percent_change_7d }) => {
  
     
     return (
@@ -98,6 +98,12 @@ const CoinCard = ({ symbol, coin_name, price_usd, percent_change_24h, percent_ch
                 <Text style={coinPrice}>{price_usd}
                     <Text style={moneySymbol}> $ </Text>
                 </Text>
+            </View>
+
+            <View style={upperRow}>
+                <Text style={coinPrice}>{price_thb}
+                    <Text style={moneySymbol}> ฿ </Text>
+                </Text>                    
             </View>
 
             <View style={statisticsContainer}>

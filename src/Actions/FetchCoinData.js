@@ -12,7 +12,8 @@ export default function FetchCoinData() {
 
         dispatch({ type: FETCHING_COIN_DATA })
 
-        return axios.get(`${apiBaseURL}/v1/ticker/?limit=10`)
+        //return axios.get(`${apiBaseURL}/v1/ticker/?limit=10`)
+        return axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=THB&limit=10')
             .then(res => {
                 return dispatch({ type: FETCHING_COIN_DATA_SUCCESS, payload: res.data });                
             })
